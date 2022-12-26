@@ -1,8 +1,9 @@
 import React from "react";
-import Game from "./page";
+import Calculator from "./calc";
+//import Game from "./page";
 
 export default function App(){
     return (
-        <Game/>
+        <Calculator/>
     )
 }

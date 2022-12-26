@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Board from "./board";
+import './index.css';
+import "./styles.css";
 
 export default function Game() {
     const [history, setHistory] = useState([
         {
             squares: Array(9).fill(null),
+            lastPlay: Array(2),
         }
     ]);
     const [xIsNext, setXIsNext] = useState(true);
@@ -30,6 +33,7 @@ export default function Game() {
         setHistory(
           newHistory.concat([{
             squares: squares,
+            lastPlay: [i%3,Math.floor(i/3)],
           }]),
         );
         setXIsNext(!xIsNext);
@@ -52,11 +56,15 @@ export default function Game() {
                     {
                         history.map((step, move) => {
                             const desc = move ?
-                            `Go to move #${move}` :
-                            'Go to game start';
+                                `Go to move #${move}` :
+                                'Go to game start';
+                            const pos = move ?
+                                `col:${history[move].lastPlay[0]}, fil:${history[move].lastPlay[1]}` :
+                                `Do a move`;
                             return (
-                                <li key={move}>
+                                <li className="list-item" key={move}>
                                     <button onClick={() => jumpTo(move)}>{desc}</button>
+                                    <p>{pos}</p>
                                 </li>
                             );
                         })
