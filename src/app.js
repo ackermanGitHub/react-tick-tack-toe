@@ -1,6 +1,5 @@
 import React from "react";
-import Calculator from "./calc";
-//import Game from "./page";
+import Calculator from "./containers/calculator";
 
 export default function App(){
     return (
