@@ -1,15 +1,13 @@
 import React from "react";
+import { Btn } from "./styles/calculator";
 
-export default function NumberBtn({children, onClick, className, ...restProps}){
+export default function NumberBtn({children, onClick, ...restProps}){
     return (
-        <div>
-            <button 
-                {...restProps} 
-                className={`btn + ${className}`} 
-                onClick={() => onClick(children)}
-            >
-                {children}
-            </button>
-        </div>
+        <Btn 
+            {...restProps} 
+            onClick={() => onClick(children)}
+        >
+            {children}
+        </Btn>
     )
 }

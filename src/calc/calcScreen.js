@@ -1,9 +1,10 @@
 import React from "react";
+import { Screen, Pane } from "./styles/calculator";
 
-export default function CalcScreen({children, className, ...restProps}){
+export default function CalcScreen({children, ...restProps}){
     return (
-        <div {...restProps} className={`calcScreen + ${className}`}>
-            <p>{children}</p>
-        </div>
+        <Screen {...restProps}>
+            <Pane>{children}</Pane>
+        </Screen>
     )
 }
