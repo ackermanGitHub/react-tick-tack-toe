@@ -1,9 +1,10 @@
 import React from "react";
+import { SquareBtn } from './styles/tick-tack-toe';
 
-export default function Square(props) {
+export default function Square({value, onClick, ...restProps}) {
     return (
-      <button className="square" onClick={props.onClick}>
-        {props.value}
-      </button>
+      <SquareBtn {...restProps} onClick={onClick}>
+        {value}
+      </SquareBtn>
     );
 }

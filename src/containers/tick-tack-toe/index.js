@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Board from "./board";
-import './index.css';
-import "./styles.css";
+import { MainContainer, InfoContainer } from "./styles/tick-tack-toe";
 
 export default function Game() {
     const [history, setHistory] = useState([
@@ -16,11 +15,10 @@ export default function Game() {
     const current = history[stepNumber];
     const winner = calculateWinner(current.squares);
     let status;
-    if (winner) {
+    if (winner)
       status = 'Winner: ' + winner;
-    } else {
+    else 
       status = 'Next player: ' + (xIsNext ? 'X' : 'O');
-    }
 
     function handleClick(i) {
         const newHistory = history.slice(0, stepNumber + 1);
@@ -39,39 +37,36 @@ export default function Game() {
         setXIsNext(!xIsNext);
         setStepNumber(newHistory.length);
     }
-
     function jumpTo(step) {
         setStepNumber(step);
         setXIsNext((step % 2) === 0);
     }
 
     return (
-        <div className="game">
-          <div className="game-board">
-            <Board squares={current.squares} onClick={(i) => handleClick(i)} xIsNext={xIsNext} />
-          </div>
-          <div className="game-info">
-            <div>{status}</div>
-                <ol>
-                    {
-                        history.map((step, move) => {
-                            const desc = move ?
-                                `Go to move #${move}` :
-                                'Go to game start';
-                            const pos = move ?
-                                `col:${history[move].lastPlay[0]}, fil:${history[move].lastPlay[1]}` :
-                                `Do a move`;
-                            return (
-                                <li className="list-item" key={move}>
-                                    <button onClick={() => jumpTo(move)}>{desc}</button>
-                                    <p>{pos}</p>
-                                </li>
-                            );
-                        })
-                    }
-                </ol>
-            </div>
-        </div>
+        <MainContainer>
+          <Board squares={current.squares} onClick={(i) => handleClick(i)} xIsNext={xIsNext} />
+          <InfoContainer>
+            {status}
+            <ol>
+                {
+                    history.map((step, move) => {
+                        const desc = move ?
+                            `Go to move #${move}` :
+                            'Go to game start';
+                        const pos = move ?
+                            `col:${history[move].lastPlay[0]}, fil:${history[move].lastPlay[1]}` :
+                            `Do a move`;
+                        return (
+                            <li key={move}>
+                                <button onClick={() => jumpTo(move)}>{desc}</button>
+                                <p>{pos}</p>
+                            </li>
+                        );
+                    })
+                }
+            </ol>
+            </InfoContainer>
+        </MainContainer>
     );
 }
 
