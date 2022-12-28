@@ -16,8 +16,12 @@ export const SquareBtn = styled.button`
 `;
 
 export const MainContainer = styled.div`
+    background-color: ${({ bg = "gray" }) => bg};
+`;
+
+export const GameContainer = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: ${({ direction = "row" }) => direction};
     justify-content: center;
     align-items: center;
     height: 500px;

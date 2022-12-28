@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Board from "./board";
-import { MainContainer, InfoContainer } from "./styles/tick-tack-toe";
+import { MainContainer, InfoContainer, GameContainer } from "./styles/tick-tack-toe";
+import HeaderContainer from "../../common/header";
+import Footer from "../../common/footer";
 
 export default function Game() {
     const [history, setHistory] = useState([
@@ -44,28 +46,32 @@ export default function Game() {
 
     return (
         <MainContainer>
-          <Board squares={current.squares} onClick={(i) => handleClick(i)} xIsNext={xIsNext} />
-          <InfoContainer>
-            {status}
-            <ol>
-                {
-                    history.map((step, move) => {
-                        const desc = move ?
-                            `Go to move #${move}` :
-                            'Go to game start';
-                        const pos = move ?
-                            `col:${history[move].lastPlay[0]}, fil:${history[move].lastPlay[1]}` :
-                            `Do a move`;
-                        return (
-                            <li key={move}>
-                                <button onClick={() => jumpTo(move)}>{desc}</button>
-                                <p>{pos}</p>
-                            </li>
-                        );
-                    })
-                }
-            </ol>
+          <HeaderContainer/>
+          <GameContainer>
+            <Board squares={current.squares} onClick={(i) => handleClick(i)} xIsNext={xIsNext} />
+            <InfoContainer>
+              {status}
+              <ol>
+                  {
+                      history.map((step, move) => {
+                          const desc = move ?
+                              `Go to move #${move}` :
+                              'Go to game start';
+                          const pos = move ?
+                              `col:${history[move].lastPlay[0]}, fil:${history[move].lastPlay[1]}` :
+                              `Do a move`;
+                          return (
+                              <li key={move}>
+                                  <button onClick={() => jumpTo(move)}>{desc}</button>
+                                  <p>{pos}</p>
+                              </li>
+                          );
+                      })
+                  }
+              </ol>
             </InfoContainer>
+          </GameContainer>
+          <Footer/>
         </MainContainer>
     );
 }

@@ -10,6 +10,8 @@ export default function Calculator(){
     }
     function calc(operation){
         let result = operation;
+        if(operation === '')
+            return 0;
         if(typeof result === 'number')
             return result;
         if(result.includes("+")){
@@ -18,8 +20,8 @@ export default function Calculator(){
                 return calc(item);
             });
             result = opResult.reduce((a,b)=>{
-                return parseInt(a)+parseInt(b);
-            })
+                return parseFloat(a)+parseFloat(b);
+            });
         }
         if(typeof result === 'number')
             return result;
@@ -29,8 +31,8 @@ export default function Calculator(){
                 return calc(item);
             });
             result = opResult.reduce((a,b)=>{
-                return parseInt(a)-parseInt(b);
-            })
+                return parseFloat(a)-parseFloat(b);
+            });
         }
         if(typeof result === 'number')
             return result;
@@ -40,7 +42,7 @@ export default function Calculator(){
                 return calc(item);
             });
             result = opResult.reduce((a,b)=>{
-                return parseInt(a)*parseInt(b);
+                return parseFloat(a)*parseFloat(b);
             })
         }
         if(typeof result === 'number')
@@ -51,7 +53,7 @@ export default function Calculator(){
                 return calc(item);
             });
             result = opResult.reduce((a,b)=>{
-                return parseInt(a)/parseInt(b);
+                return parseFloat(a)/parseFloat(b);
             })
         }
         return result;
@@ -63,8 +65,12 @@ export default function Calculator(){
                 <NumberBtn onClick={() => {
                     if(typeof operation === 'string')
                         setOperation(operation.slice(0, -1));
-                    else
-                        setOperation(parseInt(operation/10));
+                    else{
+                        if(operation < 10)
+                            setOperation(0)
+                        else
+                            setOperation(parseFloat(operation.toString().split("").slice(0,-1).join("")));
+                    }
                 }}>del</NumberBtn>
             </ScreenContainer>
             <BtnContainer>
