@@ -6,7 +6,9 @@ import HeaderContainer from "../common/header";
 export default function Home() {
     return (
         <MainContainer direction={"column"}>
-            <HeaderContainer></HeaderContainer>
+            <HeaderContainer>
+                
+            </HeaderContainer>
             <ContentContainer height={"100%"} direction={"column"}>
                 <Title>An Aplication for Enterteiment</Title>
                 <SubTitle>Personal proyect implementing React, npm, advanced javascript, and APIs for earn practic    experience</SubTitle>
