@@ -8,7 +8,7 @@ export const ButtonLink = styled(ReactRouterLink)`
     height: fit-content;
     font-size: 1.8rem;
     font-weight: bold;
-    margin-top: ${({ marginTop = "20" }) => marginTop};
+    margin: ${({ margintop = "20px" }) => margintop};
     color: black;
     border: 2px solid black;
     border-radius: 15px;
@@ -28,13 +28,26 @@ export const CenteredContainer = styled.div`
     margin: auto;
 `;
 
+export const NavContainer = styled.div`
+    display: flex;
+    flex-direction: ${({ direction= "row" }) => direction};
+    justify-content: space-between;
+    align-items: center;
+    background-color: ${({ background = "transparent" }) => background};
+    height: ${({ height = "180px" }) => height};
+    width: ${({ width = "90%" }) => width};
+    margin-top: ${({ margintop = "0" }) => margintop};
+`;
+
 export const ContentContainer = styled.div`
     display: flex;
     flex-direction: ${({ direction= "row" }) => direction};
-    background-color: ${({ background = "#999" }) => background};
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: ${({ height = "500px" }) => height};;
+    background-color: ${({ background = "#999" }) => background};
+    height: ${({ height = "500px" }) => height};
+    margin-top: ${({ margintop = "0" }) => margintop};
 `;
 export const MainContainer = styled.div`
     background-color: ${({ background = "#999" }) => background};
