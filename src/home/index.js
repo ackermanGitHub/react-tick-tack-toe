@@ -10,7 +10,7 @@ export default function Home() {
                 {/* Here is a nav inside the Header Container. Got to fix that later */}
                 <Title>An Aplication for Enterteiment</Title>
                 <SubTitle>Personal proyect implementing React, npm, advanced javascript, and APIs for earn practic    experience</SubTitle>
-                <ContentContainer height={"auto"} background-color={"red"}>
+                <ContentContainer height={"auto"}>
                     <ButtonLink to={"/Game"}>Game</ButtonLink>
                     <ButtonLink to={"/Calculator"}>Calculator</ButtonLink>
                     <ButtonLink to={"/Random-Generator"}>Random Generator</ButtonLink>

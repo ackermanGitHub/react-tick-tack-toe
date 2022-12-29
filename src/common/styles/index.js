@@ -48,7 +48,7 @@ export const ContentContainer = styled.div`
     background-color: ${({ background = "#999" }) => background};
     height: ${({ height = "auto" }) => height};
     width: ${({ width = "auto" }) => width};
-    margin-top: ${({ margintop = "0" }) => margintop};
+    margin: ${({ margin = "0" }) => margin};
 `;
 export const MainContainer = styled.div`
     background-color: ${({ background = "#999" }) => background};
@@ -82,9 +82,8 @@ export const SubTitle = styled.h2`
 export const ScreenContainer = styled.div`
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 30px;
+    width: 250px;
+    margin: 30px 0;
 `;
 
 export const BtnContainer = styled.div`

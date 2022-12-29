@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import NumberBtn from "./numBtn";
-import CalcScreen from "./calcScreen";
-import { ContentContainer, ScreenContainer, CenteredContainer, BtnContainer } from "../../common/styles";
+import HeaderContainer from "../../common/header";
+import Footer from "../../common/footer";
+import { ContentContainer, ScreenContainer, MainContainer, BtnContainer } from "../../common/styles";
+import { Btn, Screen, Pane } from "./styles/calculator";
 
 export default function Calculator(){
     const [operation, setOperation] = useState("");
@@ -59,37 +60,38 @@ export default function Calculator(){
         return result;
     }
     return (
-        <CenteredContainer heigth={"100%"}>
-            <ContentContainer width={"400px"}>
+        <MainContainer>
+            <HeaderContainer/>
+            <ContentContainer margin={"auto"} width={"300px"}>
                 <ScreenContainer>
-                    <CalcScreen>{operation}</CalcScreen>
-                    <NumberBtn onClick={() => {
+                <Screen>
+                    <Pane>{operation}</Pane>
+                </Screen>
+                    <Btn onClick={() => {
                         if(typeof operation === 'string')
                             setOperation(operation.slice(0, -1));
                         else{
-                            if(operation < 10)
+                            operation < 10 ? 
                                 setOperation(0)
-                            else
-                                setOperation(parseFloat(operation.toString().split("").slice(0,-1).join("")));
+                                : setOperation(parseFloat(operation.toString().split("").slice(0,-1).join("")));
                         }
-                    }}>del</NumberBtn>
+                    }} margin={"auto"}>del</Btn>
                 </ScreenContainer>
                 <BtnContainer>
                     {[1,2,3,4,5,6,7,8,9,"+",0,"-","*","/"].map((item) => {
                         return(
-                            <NumberBtn key={item} onClick={(i) => handleClick(i)} >{item}</NumberBtn>
+                            <Btn key={item} onClick={() => handleClick(item)} >{item}</Btn>
                         )
                     })}
-                </BtnContainer>
-                <BtnContainer>
-                    <NumberBtn onClick={() => {
+                    <Btn onClick={() => {
                         setOperation(calc(operation));
-                    }} >=</NumberBtn>
-                    <NumberBtn onClick={() => {
+                    }} >=</Btn>
+                    <Btn onClick={() => {
                         setOperation("");
-                    }} >C</NumberBtn>
+                    }} >C</Btn>
                 </BtnContainer>
             </ContentContainer>
-        </CenteredContainer>
+            <Footer/>
+        </MainContainer>
     )
 }

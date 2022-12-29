@@ -44,5 +44,6 @@ export const Pane = styled.p`
 export const Btn = styled.button`
     height:30px;
     width: 60px;
-    margin: 0 15px 20px 15px;
+    margin: ${({ margin = "0 15px 20px 15px" }) => margin};
+    border-radius: 10px;
 `;
