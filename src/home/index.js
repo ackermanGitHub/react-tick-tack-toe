@@ -5,12 +5,12 @@ import HeaderContainer from "../common/header";
 
 export default function Home() {
     return (
-        <MainContainer direction={"cl¿olumn"}>
+        <MainContainer direction={"column"}>
             <HeaderContainer direction={"column"}>
                 {/* Here is a nav inside the Header Container. Got to fix that later */}
                 <Title>An Aplication for Enterteiment</Title>
                 <SubTitle>Personal proyect implementing React, npm, advanced javascript, and APIs for earn practic    experience</SubTitle>
-                <ContentContainer height={"180px"}>
+                <ContentContainer height={"auto"} background-color={"red"}>
                     <ButtonLink to={"/Game"}>Game</ButtonLink>
                     <ButtonLink to={"/Calculator"}>Calculator</ButtonLink>
                     <ButtonLink to={"/Random-Generator"}>Random Generator</ButtonLink>

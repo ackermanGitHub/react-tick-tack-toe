@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 
 export const Container = styled.div`
     display: flex;
-    margin: 25px 56px;
+    margin: 0px 56px;
     flex-direction: ${({ direction= "row" }) => direction};
     color: #aaaa;
     padding: 18px 0;

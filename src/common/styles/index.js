@@ -46,7 +46,8 @@ export const ContentContainer = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${({ background = "#999" }) => background};
-    height: ${({ height = "500px" }) => height};
+    height: ${({ height = "auto" }) => height};
+    width: ${({ width = "auto" }) => width};
     margin-top: ${({ margintop = "0" }) => margintop};
 `;
 export const MainContainer = styled.div`

@@ -8,7 +8,7 @@ export const Container = styled.div`
     flex-direction: column;
 
     @media (max-width: 1000px) {
-        padding: 70px 30px;
+        padding: 50px 30px;
     }
 `;
 
@@ -29,7 +29,7 @@ export const Row = styled.div`
 `;
 
 export const Link = styled.a`
-    color: #Black;
+    color: black;
     margin-bottom: 20px;
     font-size: 14px;
     text-decoration: none;
@@ -37,13 +37,13 @@ export const Link = styled.a`
 
 export const Title = styled.p`
     font-size: 16px;
-    color: #Black;
+    color: black;
     margin-bottom: 40px;
 `;
 
 export const Text = styled.p`
     font-size: 13px;
-    color: #Black;
+    color: black;
     margin-bottom: 40px;
 `;
 

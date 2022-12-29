@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NumberBtn from "./numBtn";
 import CalcScreen from "./calcScreen";
-import { MainContainer, ScreenContainer, BtnContainer } from "./styles/calculator";
+import { ContentContainer, ScreenContainer, CenteredContainer, BtnContainer } from "../../common/styles";
 
 export default function Calculator(){
     const [operation, setOperation] = useState("");
@@ -59,35 +59,37 @@ export default function Calculator(){
         return result;
     }
     return (
-        <MainContainer>
-            <ScreenContainer>
-                <CalcScreen>{operation}</CalcScreen>
-                <NumberBtn onClick={() => {
-                    if(typeof operation === 'string')
-                        setOperation(operation.slice(0, -1));
-                    else{
-                        if(operation < 10)
-                            setOperation(0)
-                        else
-                            setOperation(parseFloat(operation.toString().split("").slice(0,-1).join("")));
-                    }
-                }}>del</NumberBtn>
-            </ScreenContainer>
-            <BtnContainer>
-                {[1,2,3,4,5,6,7,8,9,"+",0,"-","*","/"].map((item) => {
-                    return(
-                        <NumberBtn key={item} onClick={(i) => handleClick(i)} >{item}</NumberBtn>
-                    )
-                })}
-            </BtnContainer>
-            <BtnContainer>
-                <NumberBtn onClick={() => {
-                    setOperation(calc(operation));
-                }} >=</NumberBtn>
-                <NumberBtn onClick={() => {
-                    setOperation("");
-                }} >C</NumberBtn>
-            </BtnContainer>
-        </MainContainer>
+        <CenteredContainer heigth={"100%"}>
+            <ContentContainer width={"400px"}>
+                <ScreenContainer>
+                    <CalcScreen>{operation}</CalcScreen>
+                    <NumberBtn onClick={() => {
+                        if(typeof operation === 'string')
+                            setOperation(operation.slice(0, -1));
+                        else{
+                            if(operation < 10)
+                                setOperation(0)
+                            else
+                                setOperation(parseFloat(operation.toString().split("").slice(0,-1).join("")));
+                        }
+                    }}>del</NumberBtn>
+                </ScreenContainer>
+                <BtnContainer>
+                    {[1,2,3,4,5,6,7,8,9,"+",0,"-","*","/"].map((item) => {
+                        return(
+                            <NumberBtn key={item} onClick={(i) => handleClick(i)} >{item}</NumberBtn>
+                        )
+                    })}
+                </BtnContainer>
+                <BtnContainer>
+                    <NumberBtn onClick={() => {
+                        setOperation(calc(operation));
+                    }} >=</NumberBtn>
+                    <NumberBtn onClick={() => {
+                        setOperation("");
+                    }} >C</NumberBtn>
+                </BtnContainer>
+            </ContentContainer>
+        </CenteredContainer>
     )
 }

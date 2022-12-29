@@ -9,7 +9,7 @@ export default function HeaderContainer({children, ...restProps}){
                 <Text>Lorem Ipsum</Text>
                 <ButtonLink margintop={"0"} to={"/"}>Home</ButtonLink>
             </NavContainer>
-            <ContentContainer margintop={"20px"} height={"100%"} direction={"column"} >
+            <ContentContainer margintop={"40px"} height={"100%"} direction={"column"} >
                 {children}
             </ContentContainer>
         </Container>
