@@ -82,7 +82,7 @@ export const SubTitle = styled.h2`
 export const ScreenContainer = styled.div`
     display: flex;
     flex-direction: row;
-    width: 250px;
+    width: 100%;
     margin: 30px 0;
 `;
 
@@ -100,7 +100,7 @@ export const Screen = styled.input`
     border: solid 1px black;
     border-radius: 10px;
     height: 40px;
-    width: 170px;
+    width: ${({ width = "auto" }) => width};
     color: black;
     font-size: 1.8rem;
 `;
