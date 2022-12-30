@@ -101,6 +101,7 @@ export const Screen = styled.input`
     border-radius: 10px;
     height: 40px;
     width: ${({ width = "auto" }) => width};
+    margin: ${({ margin = "auto" }) => margin};
     color: black;
     font-size: 1.8rem;
 `;

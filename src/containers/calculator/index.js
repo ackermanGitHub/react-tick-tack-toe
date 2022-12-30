@@ -76,7 +76,7 @@ export default function Calculator(){
                                     : setOperation(parseFloat(operation.toString().split("").slice(0,-1).join("")));
                             }
                         }} margin={"auto"}
-                        sx={{ fontSize: 35 }}
+                        sx={{ fontSize: 30 }}
                     >
                     </DeleteIcon>
                 </ScreenContainer>
