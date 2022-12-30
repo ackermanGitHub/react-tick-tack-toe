@@ -1,4 +1,12 @@
 import styled from "styled-components/macro";
+import BackspaceRoundedIcon from '@mui/icons-material/BackspaceRounded';
+
+export const DeleteIcon = styled(BackspaceRoundedIcon)`
+    margin: auto;
+    &:active {
+        color: #ffffff;
+    }
+`;
 
 export const MainContainer = styled.div`
     width: 300px;

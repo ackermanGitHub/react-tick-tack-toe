@@ -115,8 +115,17 @@ export const Pane = styled.p`
 export const Btn = styled.button`
     height:30px;
     width: 60px;
+    border: solid 1px black;
+    border-radius: 5px;
     margin: ${({ margin = "0 15px 20px 15px" }) => margin};
     color: ${({ color = "black" }) => color};
+
+    &:active {
+        background-color: gray;
+    }
+    &:hover {
+        background-color: #ccc;
+    }
 `;
 
 export const SquareBtn = styled.button`

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import HeaderContainer from "../../common/header";
 import Footer from "../../common/footer";
-import BackspaceRoundedIcon from '@mui/icons-material/BackspaceRounded';
+import { DeleteIcon } from "./styles/calculator";
 import { ContentContainer, ScreenContainer, MainContainer, BtnContainer, Screen, Btn } from "../../common/styles";
 
 export default function Calculator(){
@@ -66,7 +66,7 @@ export default function Calculator(){
                 <ScreenContainer>
                 <Screen type={"text"} disabled value={operation}>
                 </Screen>
-                    <BackspaceRoundedIcon
+                    <DeleteIcon
                         onClick={() => {
                             if(typeof operation === 'string')
                                 setOperation(operation.slice(0, -1));
@@ -76,10 +76,9 @@ export default function Calculator(){
                                     : setOperation(parseFloat(operation.toString().split("").slice(0,-1).join("")));
                             }
                         }} margin={"auto"}
-                        
+                        sx={{ fontSize: 35 }}
                     >
-
-                    </BackspaceRoundedIcon>
+                    </DeleteIcon>
                 </ScreenContainer>
                 <BtnContainer>
                     {[1,2,3,4,5,6,7,8,9,"+",0,"-","*","/"].map((item) => {
