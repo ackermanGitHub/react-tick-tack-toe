@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import HeaderContainer from "../../common/header";
 import Footer from "../../common/footer";
-import { ContentContainer, ScreenContainer, MainContainer, BtnContainer } from "../../common/styles";
-import { Btn, Screen, Pane } from "./styles/calculator";
+import BackspaceRoundedIcon from '@mui/icons-material/BackspaceRounded';
+import { ContentContainer, ScreenContainer, MainContainer, BtnContainer, Screen, Btn } from "../../common/styles";
 
 export default function Calculator(){
     const [operation, setOperation] = useState("");
@@ -64,18 +64,22 @@ export default function Calculator(){
             <HeaderContainer/>
             <ContentContainer margin={"auto"} width={"300px"}>
                 <ScreenContainer>
-                <Screen>
-                    <Pane>{operation}</Pane>
+                <Screen type={"text"} disabled value={operation}>
                 </Screen>
-                    <Btn onClick={() => {
-                        if(typeof operation === 'string')
-                            setOperation(operation.slice(0, -1));
-                        else{
-                            operation < 10 ? 
-                                setOperation(0)
-                                : setOperation(parseFloat(operation.toString().split("").slice(0,-1).join("")));
-                        }
-                    }} margin={"auto"}>del</Btn>
+                    <BackspaceRoundedIcon
+                        onClick={() => {
+                            if(typeof operation === 'string')
+                                setOperation(operation.slice(0, -1));
+                            else{
+                                operation < 10 ? 
+                                    setOperation(0)
+                                    : setOperation(parseFloat(operation.toString().split("").slice(0,-1).join("")));
+                            }
+                        }} margin={"auto"}
+                        
+                    >
+
+                    </BackspaceRoundedIcon>
                 </ScreenContainer>
                 <BtnContainer>
                     {[1,2,3,4,5,6,7,8,9,"+",0,"-","*","/"].map((item) => {
