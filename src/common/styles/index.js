@@ -58,7 +58,7 @@ export const Title = styled.h1`
     font-size: 5rem;
     width: 80%;
     line-height: 1.1;
-    margin-top: 0;
+    margin-top: ${({ margintop = "20px" }) => margintop};
     margin-bottom 8px;
     color: #222;
     text-align: center;
@@ -96,26 +96,27 @@ export const BtnContainer = styled.div`
     width: 100%;
 `;
 
-export const Screen = styled.div`
-    display: flex;
-    justify-content: center;
-    position: relative;
+export const Screen = styled.input`
     border: solid 1px black;
     border-radius: 10px;
     height: 40px;
     width: 170px;
+    color: black;
+    font-size: 1.8rem;
 `;
 
 export const Pane = styled.p`
     font-size: 2.4rem;
     text-align: center;
-    margin: auto;
+    margin: ${({ margin = "auto" }) => margin};
+    color: ${({ color = "black" }) => color};
 `;
 
 export const Btn = styled.button`
     height:30px;
     width: 60px;
-    margin: 0 15px 20px 15px;
+    margin: ${({ margin = "0 15px 20px 15px" }) => margin};
+    color: ${({ color = "black" }) => color};
 `;
 
 export const SquareBtn = styled.button`

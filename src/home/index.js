@@ -7,7 +7,6 @@ export default function Home() {
     return (
         <MainContainer direction={"column"}>
             <HeaderContainer direction={"column"}>
-                {/* Here is a nav inside the Header Container. Got to fix that later */}
                 <Title>An Aplication for Enterteiment</Title>
                 <SubTitle>Personal proyect implementing React, npm, advanced javascript, and APIs for earn practic    experience</SubTitle>
                 <ContentContainer height={"auto"}>
