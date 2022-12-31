@@ -97,6 +97,7 @@ export const BtnContainer = styled.div`
 `;
 
 export const Screen = styled.input`
+    text-align: center;
     border: solid 1px black;
     border-radius: 10px;
     height: 40px;
