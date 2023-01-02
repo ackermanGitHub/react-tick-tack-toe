@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HeaderContainer from "../../common/header";
 import Footer from "../../common/footer";
 import { MainContainer, Btn, ContentContainer, Screen, Pane} from "../../common/styles";
+import { randomNum } from "../../common/utils/functions.ts";
 
 export default function RandomGen() {
     const [lowNum , setLowNum] = useState(0);
@@ -12,7 +13,7 @@ export default function RandomGen() {
             return;
         let time = 500;
         const count = setInterval(()=>{
-            setRandNum(Math.floor(Math.random()*(upNum-lowNum+1))+lowNum)
+            setRandNum(randomNum(lowNum, upNum));
         }, time);
         setTimeout(()=>{
             clearInterval(count);
