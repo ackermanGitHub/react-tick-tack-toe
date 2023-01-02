@@ -24,11 +24,11 @@ export default function App() {
         />
         <Route 
           exact path={"/Cat-API"} 
-          element={ <Home/> }
+          element={ <CatAPI/> }
         />
         <Route 
           exact path={"/"} 
-          element={ <CatAPI/> }
+          element={ <Home/> }
         />
       </Routes>    
     </Router>
