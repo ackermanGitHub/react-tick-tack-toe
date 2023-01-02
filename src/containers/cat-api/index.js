@@ -13,11 +13,10 @@ api.defaults.headers.common['X-API-KEY'] = 'live_XTd3skGaIZ4bJVqKnaa6db01fvPZ2Jd
 
 export default function CatAPI() {
     const [catsUrl, setCatUrls] = useState(Array(2).fill(''));
-     
+
     async function getCat() {
         try {
           const {data} = await api.get('/images/search?limit=2');
-          console.log(data);
           setCatUrls(data.map(
             cat => {return cat.url}
           ))
