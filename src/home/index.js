@@ -13,6 +13,7 @@ export default function Home() {
                     <ButtonLink to={"/Game"}>Game</ButtonLink>
                     <ButtonLink to={"/Calculator"}>Calculator</ButtonLink>
                     <ButtonLink to={"/Random-Generator"}>Random Generator</ButtonLink>
+                    <ButtonLink to={"/Cat-API"}>Cat API</ButtonLink>
                 </ContentContainer>
             </HeaderContainer>
             <Footer></Footer>
