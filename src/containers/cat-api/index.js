@@ -4,7 +4,7 @@ import Footer from "../../common/footer";
 import { MainContainer, Btn, ContentContainer} from "../../common/styles";
 import { CatImage } from "./styles";
 import { api } from "./API";
-
+//dimport { Mafs, CartesianCoordinates, FunctionGraph } from "mafs";
 
 export default function CatAPI() {
     const [catsUrl, setCatUrls] = useState([]);
