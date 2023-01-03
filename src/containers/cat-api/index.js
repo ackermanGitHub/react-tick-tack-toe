@@ -6,11 +6,19 @@ import { CatImage } from "./styles";
 import { api } from "./API";
 //dimport { Mafs, CartesianCoordinates, FunctionGraph } from "mafs";
 
+function isCubaLatitud(latitude, longitude){
+    let result = true;
+    if(latitude > -75 || latitude < -85)
+        result = false;
+    if(longitude > 24 || longitude < 19)
+        result = false;
+    return result;
+}
+
 export default function CatAPI() {
     const [catsUrl, setCatUrls] = useState([]);
     
     async function getCat() {
-        console.log("aaaa");
         try {
             const {data} = await api.get('/images/search?limit=2');
             setCatUrls(data.map(cat => cat.url));
@@ -18,9 +26,41 @@ export default function CatAPI() {
             console.error(error);
         }
     }
+    /* async function getLocationInfo(latitude, longitude) {
+        const response = await fetch(
+          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyCAPCfPULsJkPU3rryRLTPvUzNRbLIX_2s`
+        );
+        const data = await response.json();
+        return data.results[0];
+    } */
     
     useEffect(() => {
-        getCat();
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    console.log({
+                        latitude: position.coords.latitude,
+                        longitude: position.coords.longitude,
+                    });
+                    if(isCubaLatitud(position.coords.latitude, position.coords.longitude))
+                        window.alert("You are in Cuba");
+                    else
+                        getCat();
+              },
+              (error) => {
+                console.error(error);
+              }
+            );
+        } else {
+            console.error('Geolocation is not supported by this browser.');
+        }
+
+        if (navigator.connection) {
+            //console.log(navigator.connection);
+        } else {
+            console.error('Network Information is not supported by this browser.');
+        }
+
     }, [])
 
     return (
