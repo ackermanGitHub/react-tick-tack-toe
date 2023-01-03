@@ -44,11 +44,15 @@ export default function CatAPI() {
                     });
                     if(isCubaLatitud(position.coords.latitude, position.coords.longitude))
                         window.alert("You are in Cuba");
-                    else
-                        getCat();
+                    //else
+                    //    getCat();
               },
               (error) => {
                 console.error(error);
+              },
+              {
+                enableHighAccuracy: true,
+                timeout: 5000
               }
             );
         } else {
@@ -75,7 +79,7 @@ export default function CatAPI() {
                             )
                         })
                     }
-                    <Btn onClick={getCat} margin={"auto"}>Get Cat</Btn>
+                    <Btn onClick={console.log("getCatt")/* getCat */} margin={"auto"}>Get Cat</Btn>
                 </ContentContainer>
             </HeaderContainer>
             <Footer></Footer>
