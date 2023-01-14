@@ -12,7 +12,7 @@ export default function CatAPI() {
     async function getCat() {
         try {
             const {data} = await api.get('/images/search?limit=2');
-            setCatUrls(data.map(cat => cat.url));
+            setCatUrls(catsUrl.concat(data.map(cat => cat.url)));
         } catch (error) {
             console.error(error);
         }
@@ -27,14 +27,14 @@ export default function CatAPI() {
             <HeaderContainer direction={"column"}>
                 <ContentContainer direction={"column"} height={"auto"} margin={"auto"} width={"300px"}>
                     {
-                        [].map((item, index)=>{
+                        catsUrl.map((item, index)=>{
                             return (
                                 <CatImage src={item} key={index} />
 
                             )
                         })
                     }
-                    <Btn onClick={null} margin={"auto"}>Get Cat</Btn>
+                    <Btn onClick={getCat} margin={"auto"}>Get Cat</Btn>
                 </ContentContainer>
             </HeaderContainer>
             <Footer></Footer>
