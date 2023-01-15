@@ -6,6 +6,9 @@ export const DeleteIcon = styled(BackspaceRoundedIcon)`
     &:active {
         color: #ffffff;
     }
+    &:hover {
+        color: gray;
+    }
 `;
 
 export const MainContainer = styled.div`
