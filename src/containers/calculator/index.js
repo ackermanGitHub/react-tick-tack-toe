@@ -65,8 +65,8 @@ export default function Calculator(){
             <Header/>
             <ContentContainer margin={"auto"} width={"300px"}>
                 <ScreenContainer>
-                <Screen type={"text"} disabled value={operation}>
-                </Screen>
+                    <Screen type={"text"} disabled value={operation}>
+                    </Screen>
                     <DeleteIcon
                         onClick={() => {
                             if(typeof operation === 'string')

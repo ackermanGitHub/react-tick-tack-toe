@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, Title, Break, Row, Column, Link, Text } from "../common/styles/footer";
+import { FooterContainer, Title, Break, Row, Column, Link, Text } from "../common/styles/footer";
 
 export default function Footer(){
     return (
-        <Container>
+        <FooterContainer>
             <Title>Questions? Contact us.</Title>
             <Break/>
             <Row>
@@ -38,7 +38,7 @@ export default function Footer(){
             </Row>
             <Break/>
 
-            <Text>Netflix United Kindom</Text>
-        </Container>
+            <Text>Ackerman's Side Proyect</Text>
+        </FooterContainer>
     )
 }
