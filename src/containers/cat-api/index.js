@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import HeaderContainer from "../../common/header";
 import Footer from "../../common/footer";
-import { MainContainer, Btn, ContentContainer} from "../../common/styles";
-import { CatImage } from "./styles";
+import { CatImage, MainContainer, Btn, ContentContainer } from "./styles";
 import { api } from "./API";
-//import { Mafs, CartesianCoordinates, FunctionGraph } from "mafs";
 
 export default function CatAPI() {
     const [catsUrl, setCatUrls] = useState([]);
