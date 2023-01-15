@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import HeaderContainer from "../../common/header";
 import Footer from "../../common/footer";
-import { DeleteIcon } from "./styles/calculator";
-import { ContentContainer, ScreenContainer, MainContainer, BtnContainer, Screen, Btn } from "../../common/styles";
+import { DeleteIcon, Btn, ContentContainer, 
+    ScreenContainer, MainContainer, 
+    BtnContainer, Screen } from "./styles/calculator";
 
 export default function Calculator(){
     const [operation, setOperation] = useState("");

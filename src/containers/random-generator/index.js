@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import HeaderContainer from "../../common/header";
 import Footer from "../../common/footer";
-import { MainContainer, Btn, ContentContainer, Screen, Pane} from "../../common/styles";
+import { MainContainer, Btn, ContentContainer, Screen, Pane} from "./styles/random-generator";
 import { randomNum } from "../../common/utils/functions.ts";
 
 export default function RandomGen() {

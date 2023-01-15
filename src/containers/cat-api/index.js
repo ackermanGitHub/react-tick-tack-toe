@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HeaderContainer from "../../common/header";
 import Footer from "../../common/footer";
-import { CatImage, MainContainer, Btn, ContentContainer } from "./styles";
+import { CatImage, MainContainer, Btn, ContentContainer } from "./styles/catApi";
 import { api } from "./API";
 
 export default function CatAPI() {

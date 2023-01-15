@@ -9,18 +9,7 @@ export const DeleteIcon = styled(BackspaceRoundedIcon)`
 `;
 
 export const MainContainer = styled.div`
-    width: 300px;
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-`;
-
-export const ScreenContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 30px;
+    background-color: ${({ background = "#999" }) => background};
 `;
 
 export const BtnContainer = styled.div`
@@ -33,14 +22,15 @@ export const BtnContainer = styled.div`
     width: 100%;
 `;
 
-export const Screen = styled.div`
-    display: flex;
-    justify-content: center;
-    position: relative;
+export const Screen = styled.input`
+    text-align: center;
     border: solid 1px black;
     border-radius: 10px;
     height: 40px;
-    width: 170px;
+    width: ${({ width = "auto" }) => width};
+    margin: ${({ margin = "auto" }) => margin};
+    color: black;
+    font-size: 1.8rem;
 `;
 
 export const Pane = styled.p`
@@ -54,4 +44,23 @@ export const Btn = styled.button`
     width: 60px;
     margin: ${({ margin = "0 15px 20px 15px" }) => margin};
     border-radius: 10px;
+`;
+
+export const ContentContainer = styled.div`
+    display: flex;
+    flex-direction: ${({ direction= "row" }) => direction};
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: ${({ background = "#999" }) => background};
+    height: ${({ height = "auto" }) => height};
+    width: ${({ width = "auto" }) => width};
+    margin: ${({ margin = "0" }) => margin};
+`;
+
+export const ScreenContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 30px 0;
 `;
