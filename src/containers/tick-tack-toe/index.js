@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Board from "./board";
 import { MainContainer, InfoContainer, GameContainer } from "./styles/tick-tack-toe";
-import HeaderContainer from "../../common/header";
+import Header from "../../common/header";
 import Footer from "../../common/footer";
 
 export default function Game() {
@@ -46,7 +46,7 @@ export default function Game() {
 
     return (
         <MainContainer>
-          <HeaderContainer/>
+          <Header/>
           <GameContainer>
             <Board squares={current.squares} onClick={(i) => handleClick(i)} xIsNext={xIsNext} />
             <InfoContainer>

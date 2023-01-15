@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import HeaderContainer from "../../common/header";
+import Header from "../../common/header";
 import Footer from "../../common/footer";
 import { CatImage, MainContainer, Btn, ContentContainer } from "./styles/catApi";
 import { api } from "./API";
@@ -22,7 +22,7 @@ export default function CatAPI() {
 
     return (
         <MainContainer direction={"column"}>
-            <HeaderContainer direction={"column"}>
+            <Header direction={"column"}>
                 <ContentContainer direction={"column"} height={"auto"} margin={"auto"} width={"300px"}>
                     {
                         catsUrl.map((item, index)=>{
@@ -34,7 +34,7 @@ export default function CatAPI() {
                     }
                     <Btn onClick={getCat} margin={"auto"}>Get Cat</Btn>
                 </ContentContainer>
-            </HeaderContainer>
+            </Header>
             <Footer></Footer>
         </MainContainer>
     )

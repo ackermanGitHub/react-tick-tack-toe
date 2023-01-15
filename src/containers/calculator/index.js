@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HeaderContainer from "../../common/header";
+import Header from "../../common/header";
 import Footer from "../../common/footer";
 import { DeleteIcon, Btn, ContentContainer, 
     ScreenContainer, MainContainer, 
@@ -62,7 +62,7 @@ export default function Calculator(){
     }
     return (
         <MainContainer>
-            <HeaderContainer/>
+            <Header/>
             <ContentContainer margin={"auto"} width={"300px"}>
                 <ScreenContainer>
                 <Screen type={"text"} disabled value={operation}>

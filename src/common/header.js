@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, Text,ButtonLink, ContentContainer, NavContainer } from"./styles/header";
+import { HeaderContainer, NavContainer, ContentContainer, Text, ButtonLink } from"./styles/header";
 
-export default function HeaderContainer({children, ...restProps}){
+export default function Header({children, ...restProps}){
     return (
-        <Container {...restProps}>
+        <HeaderContainer {...restProps}>
             <NavContainer height={"auto"}>
                 <Text>Lorem Ipsum</Text>
                 <ButtonLink margintop={"0"} to={"/"}>Home</ButtonLink>
@@ -11,6 +11,6 @@ export default function HeaderContainer({children, ...restProps}){
             <ContentContainer margintop={"40px"} height={"100%"} direction={"column"} >
                 {children}
             </ContentContainer>
-        </Container>
+        </HeaderContainer>
     )
 }

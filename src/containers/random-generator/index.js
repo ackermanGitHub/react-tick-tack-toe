@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HeaderContainer from "../../common/header";
+import Header from "../../common/header";
 import Footer from "../../common/footer";
 import { MainContainer, Btn, ContentContainer, Screen, Pane} from "./styles/random-generator";
 import { randomNum } from "../../common/utils/functions.ts";
@@ -21,7 +21,7 @@ export default function RandomGen() {
     }
     return (
         <MainContainer direction={"column"}>
-            <HeaderContainer direction={"column"}>
+            <Header direction={"column"}>
                 <ContentContainer direction={"column"} height={"auto"} margin={"auto"} width={"300px"}>
                     <Pane>{randNum}</Pane>
                     <ContentContainer direction={"row"}>
@@ -36,7 +36,7 @@ export default function RandomGen() {
                         handleGo();
                     }} margin={"auto"}>Go</Btn>
                 </ContentContainer>
-            </HeaderContainer>
+            </Header>
             <Footer></Footer>
         </MainContainer>
     )

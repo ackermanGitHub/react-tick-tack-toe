@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import { Link as ReactRouterLink } from 'react-router-dom';
 
-export const Container = styled.div`
+export const HeaderContainer = styled.div`
     display: flex;
     margin: 0px 56px;
     flex-direction: ${({ direction= "row" }) => direction};

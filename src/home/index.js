@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonLink, MainContainer, ContentContainer, Title, SubTitle } from "../common/styles";
+import { ButtonLink, MainContainer, ContentContainer, Title, SubTitle } from "./styles/home";
 import Footer from "../common/footer";
 import HeaderContainer from "../common/header";
 
