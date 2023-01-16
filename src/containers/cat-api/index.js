@@ -9,16 +9,19 @@ export default function CatAPI() {
     const [catsUrl, setCatUrls] = useState([]);
     
     async function getCat() {
+        console.log("executed");
         try {
             const {data} = await api.get('/images/search?limit=2');
-            setCatUrls(catsUrl.concat(data.map(cat => cat.url)));
+            setCatUrls(data.map(cat => cat.url));
         } catch (error) {
             console.error(error);
         }
     }
     
     useEffect(() => {
-        getCat();
+        return () => {
+            getCat();
+        };
     }, [])
 
     return (
