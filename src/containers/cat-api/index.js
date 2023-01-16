@@ -21,9 +21,9 @@ export default function CatAPI() {
     }, [])
 
     return (
-        <MainContainer direction={"column"}>
-            <Header direction={"column"}>
-                <ContentContainer direction={"column"} height={"auto"} margin={"auto"} width={"300px"}>
+        <MainContainer>
+            <Header>
+                <ContentContainer>
                     {
                         catsUrl.map((item, index)=>{
                             return (
@@ -32,7 +32,7 @@ export default function CatAPI() {
                             )
                         })
                     }
-                    <Btn onClick={getCat} margin={"auto"}>Get Cat</Btn>
+                    <Btn onClick={getCat} >Get Cat</Btn>
                 </ContentContainer>
             </Header>
             <Footer></Footer>
