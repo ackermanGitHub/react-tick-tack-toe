@@ -7,7 +7,7 @@ export const CatImage = styled.img`
 `;
 
 export const MainContainer = styled.div`
-    background-color: ${({ background = "#999" }) => background};
+    background-color: #999;
 `;
 
 export const ContentContainer = styled.div`

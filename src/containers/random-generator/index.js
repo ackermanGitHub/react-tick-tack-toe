@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Header from "../../common/header";
 import Footer from "../../common/footer";
-import { MainContainer, Btn, ContentContainer, Screen, Pane} from "./styles/random-generator";
+import { MainContainer, Btn, 
+    ContentContainer, Screen, Pane} from "./styles/random-generator";
 import { randomNum } from "../../common/utils/functions.ts";
 
 export default function RandomGen() {
@@ -20,24 +21,21 @@ export default function RandomGen() {
         }, 3000);
     }
     return (
-        <MainContainer direction={"column"}>
-            <Header direction={"column"}>
-                <ContentContainer direction={"column"} height={"auto"} margin={"auto"} width={"300px"}>
-                    <Pane>{randNum}</Pane>
-                    <ContentContainer direction={"row"}>
-                        <Screen width={"50px"} onChange={(item)=>{
-                            setLowNum(parseInt(item.target.value));
-                        }} margin={"20px 10px 20px 0"} type={"number"}/>
-                        <Screen width={"50px"} onChange={(item)=>{
-                            setUpNum(parseInt(item.target.value));
-                        }} margin={"20px 0 20px 10px"} type={"number"}/>
-                    </ContentContainer>
-                    <Btn onClick={()=>{
-                        handleGo();
-                    }} margin={"auto"}>Go</Btn>
-                </ContentContainer>
-            </Header>
-            <Footer></Footer>
+        <MainContainer>
+            <Header/>
+            <ContentContainer>
+                <Pane>{randNum}</Pane>
+                <Screen onChange={(item)=>{
+                    setLowNum(parseInt(item.target.value));
+                }} type={"number"}/>
+                <Screen onChange={(item)=>{
+                    setUpNum(parseInt(item.target.value));
+                }} type={"number"}/>
+                <Btn onClick={()=>{
+                    handleGo();
+                }}>Go</Btn>
+            </ContentContainer>
+            <Footer/>
         </MainContainer>
     )
 }

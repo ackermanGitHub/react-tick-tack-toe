@@ -1,19 +1,18 @@
 import styled from "styled-components/macro";
 
 export const MainContainer = styled.div`
-    background-color: ${({ background = "#999" }) => background};
+    background-color: #999;
 `;
 
 export const ContentContainer = styled.div`
     display: flex;
-    flex-direction: ${({ direction= "row" }) => direction};
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: ${({ background = "#999" }) => background};
-    height: ${({ height = "auto" }) => height};
-    width: ${({ width = "auto" }) => width};
-    margin: ${({ margin = "0" }) => margin};
+    height: auto;
+    width: 300px;
+    margin: auto;
 `;
 
 export const Screen = styled.input`
@@ -21,8 +20,7 @@ export const Screen = styled.input`
     border: solid 1px black;
     border-radius: 10px;
     height: 40px;
-    width: ${({ width = "auto" }) => width};
-    margin: ${({ margin = "auto" }) => margin};
+    width: 50px;
     color: black;
     font-size: 1.8rem;
 `;
@@ -30,8 +28,8 @@ export const Screen = styled.input`
 export const Pane = styled.p`
     font-size: 2.4rem;
     text-align: center;
-    margin: ${({ margin = "auto" }) => margin};
-    color: ${({ color = "black" }) => color};
+    margin: auto;
+    color: black;
 `;
 
 export const Btn = styled.button`
@@ -39,8 +37,8 @@ export const Btn = styled.button`
     width: 60px;
     border: solid 1px black;
     border-radius: 5px;
-    margin: ${({ margin = "0 15px 20px 15px" }) => margin};
-    color: ${({ color = "black" }) => color};
+    margin: auto;
+    color: black;
 
     &:active {
         background-color: gray;
