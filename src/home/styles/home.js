@@ -8,13 +8,14 @@ export const ButtonLink = styled(ReactRouterLink)`
     height: fit-content;
     font-size: 1.8rem;
     font-weight: bold;
-    margin: ${({ margintop = "20px" }) => margintop};
-    color: black;
+    margin: 20px;
+    color: #202124;
     border: 2px solid black;
-    border-radius: 15px;
-    padding: 8px 17px;
+    border-radius: 12px;
+    padding: 8px 16px;
     cursor: pointer;
     text-decoration: none;
+    text-align: center;
     box-sizing:border-box;
 
     &:hover {
@@ -22,26 +23,22 @@ export const ButtonLink = styled(ReactRouterLink)`
     }
 `;
 
-export const ContentContainer = styled.div`
+export const BtnsContainer = styled.div`
     display: flex;
-    flex-direction: ${({ direction= "row" }) => direction};
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: ${({ background = "#999" }) => background};
-    height: ${({ height = "auto" }) => height};
-    width: ${({ width = "auto" }) => width};
-    margin: ${({ margin = "0" }) => margin};
 `;
 export const MainContainer = styled.div`
-    background-color: ${({ background = "#999" }) => background};
+    background-color: #999;
 `;
 
 export const Title = styled.h1`
     font-size: 5rem;
     width: 80%;
     line-height: 1.1;
-    margin-top: ${({ margintop = "20px" }) => margintop};
+    margin-top: 20px;
     margin-bottom 8px;
     color: #222;
     text-align: center;

@@ -3,39 +3,22 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 
 export const HeaderContainer = styled.div`
     display: flex;
-    margin: 0px 56px;
-    flex-direction: ${({ direction= "row" }) => direction};
-    color: #aaaa;
-    padding: 18px 0;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
-    @media (max-width: 1000px) {
-        margin: 0 30px;
-    }
 `;
 
-export const NavContainer = styled.div`
+export const NavContainer = styled.nav`
     display: flex;
-    flex-direction: ${({ direction= "row" }) => direction};
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
     align-items: center;
-    background-color: ${({ background = "transparent" }) => background};
-    height: ${({ height = "180px" }) => height};
-    width: ${({ width = "90%" }) => width};
-    margin-top: ${({ margintop = "0" }) => margintop};
-`;
-
-export const ContentContainer = styled.div`
-    display: flex;
-    flex-direction: ${({ direction= "row" }) => direction};
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: ${({ background = "#999" }) => background};
-    height: ${({ height = "auto" }) => height};
-    width: ${({ width = "auto" }) => width};
-    margin: ${({ margin = "0" }) => margin};
+    background-color: transparent;
+    height: 80px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 0;
 `;
 
 export const Text = styled.p`
@@ -53,7 +36,7 @@ export const ButtonLink = styled(ReactRouterLink)`
     height: fit-content;
     font-size: 1.8rem;
     font-weight: bold;
-    margin: ${({ margintop = "20px" }) => margintop};
+    margin: 0;
     color: black;
     border: 2px solid black;
     border-radius: 15px;
