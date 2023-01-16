@@ -11,13 +11,13 @@ export const GameContainer = styled.div`
     height: 400px;
 `;
 
-export const BoardContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-`;
-
 export const InfoContainer = styled.div`
     margin-left: 20px;
+`;
+
+//Board
+export const BoardContainer = styled.div`
+    margin: auto;
 `;
 
 //Square
@@ -38,6 +38,12 @@ export const SquareBtn = styled.button`
 
 //Side-Bar
 export const SideBarContainer = styled.aside`
-    position: absolute;
+    position: relative;
     left: 30px;
 `;
+
+/* 
+    @media (max-width: 320px) {
+        position: relative;
+    }
+*/

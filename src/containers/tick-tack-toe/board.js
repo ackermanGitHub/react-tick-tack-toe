@@ -1,5 +1,6 @@
 import React from "react";
 import Square from "./square";
+import { BoardContainer } from "./styles/tick-tack-toe";
 
 export default function Board({squares, onClick, xIsNext, ...restProps}) {
   
@@ -13,7 +14,7 @@ export default function Board({squares, onClick, xIsNext, ...restProps}) {
     }
 
     return (
-      <div {...restProps}>
+      <BoardContainer {...restProps}>
         <div>
           {renderSquare(0)}
           {renderSquare(1)}
@@ -29,6 +30,6 @@ export default function Board({squares, onClick, xIsNext, ...restProps}) {
           {renderSquare(7)}
           {renderSquare(8)}
         </div>
-      </div>
+      </BoardContainer>
     );
 }

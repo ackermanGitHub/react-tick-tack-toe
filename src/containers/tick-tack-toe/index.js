@@ -49,28 +49,28 @@ export default function Game() {
         <MainContainer>
           <Header/>
           <GameContainer>
-            <Board squares={current.squares} onClick={(i) => handleClick(i)} xIsNext={xIsNext} />
             <SideBar>
               {status}
-              <ol>
+              <ul>
                   {
                       history.map((step, move) => {
                           const desc = move ?
-                              `Go to move #${move}` :
+                          `Go to move #${move}` :
                               'Go to game start';
                           const pos = move ?
                               `col:${history[move].lastPlay[0]}, fil:${history[move].lastPlay[1]}` :
                               `Do a move`;
                           return (
-                              <li key={move}>
+                            <li key={move}>
                                   <button onClick={() => jumpTo(move)}>{desc}</button>
                                   <p>{pos}</p>
                               </li>
                           );
                       })
-                  }
-              </ol>
+                    }
+              </ul>
             </SideBar>
+            <Board squares={current.squares} onClick={(i) => handleClick(i)} xIsNext={xIsNext} />
           </GameContainer>
           <Footer/>
         </MainContainer>
