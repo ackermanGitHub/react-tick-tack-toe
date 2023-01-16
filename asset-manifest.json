@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/react-tick-tack-toe/static/js/main.8818ea6d.js",
+    "main.js": "/react-tick-tack-toe/static/js/main.e62dce2d.js",
     "index.html": "/react-tick-tack-toe/index.html",
-    "main.8818ea6d.js.map": "/react-tick-tack-toe/static/js/main.8818ea6d.js.map"
+    "main.e62dce2d.js.map": "/react-tick-tack-toe/static/js/main.e62dce2d.js.map"
   },
   "entrypoints": [
-    "static/js/main.8818ea6d.js"
+    "static/js/main.e62dce2d.js"
   ]
 }
