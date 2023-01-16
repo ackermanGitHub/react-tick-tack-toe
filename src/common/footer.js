@@ -1,5 +1,6 @@
 import React from "react";
 import { FooterContainer, Title, Break, Row, Column, Link, Text } from "../common/styles/footer";
+import { packageJson } from "..";
 
 export default function Footer(){
     return (
@@ -38,7 +39,7 @@ export default function Footer(){
             </Row>
             <Break/>
 
-            <Text>Ackerman's Side Proyect</Text>
+            <Text>Ackerman's Side Proyect - Version: {packageJson.version}</Text>
         </FooterContainer>
     )
 }

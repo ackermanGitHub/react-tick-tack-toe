@@ -1,6 +1,6 @@
 {
   "name": "react-tutorial",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://ackermanGitHub.github.io/react-tick-tack-toe",
   "private": false,
   "dependencies": {
