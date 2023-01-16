@@ -1,5 +1,6 @@
 import React from "react";
-import { HeaderContainer, NavContainer, Text, ButtonLink } from"./styles/header";
+import { HeaderContainer, NavContainer, 
+    Text, ButtonLink } from"./styles/header";
 
 export default function Header({children, ...restProps}){
     return (

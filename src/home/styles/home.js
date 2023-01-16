@@ -9,7 +9,7 @@ export const ButtonLink = styled(ReactRouterLink)`
     font-size: 1.8rem;
     font-weight: bold;
     margin: 20px;
-    color: #202124;
+    color: #222;
     border: 2px solid black;
     border-radius: 12px;
     padding: 8px 16px;
@@ -21,6 +21,15 @@ export const ButtonLink = styled(ReactRouterLink)`
     &:hover {
         background-color: #ffffff;
     }
+`;
+export const ContentContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
 `;
 
 export const BtnsContainer = styled.div`

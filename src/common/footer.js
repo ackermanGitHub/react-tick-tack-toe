@@ -12,7 +12,7 @@ export default function Footer(){
                     <Link href="#">Investor Relations</Link>
                     <Link href="#">Ways to Watch</Link>
                     <Link href="#">Coporate Information</Link>
-                    <Link href="#">Netflix Originals</Link>
+                    <Link href="#">Leage Originals</Link>
                 </Column>
 
                 <Column>

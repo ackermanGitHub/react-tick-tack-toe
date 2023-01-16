@@ -12,7 +12,7 @@ export const DeleteIcon = styled(BackspaceRoundedIcon)`
 `;
 
 export const MainContainer = styled.div`
-    background-color: ${({ background = "#999" }) => background};
+    background-color: #999;
 `;
 
 export const BtnContainer = styled.div`
@@ -30,8 +30,8 @@ export const Screen = styled.input`
     border: solid 1px black;
     border-radius: 10px;
     height: 40px;
-    width: ${({ width = "auto" }) => width};
-    margin: ${({ margin = "auto" }) => margin};
+    width: auto;
+    margin: auto;
     color: black;
     font-size: 1.8rem;
 `;
@@ -45,20 +45,19 @@ export const Pane = styled.p`
 export const Btn = styled.button`
     height:30px;
     width: 60px;
-    margin: ${({ margin = "0 15px 20px 15px" }) => margin};
+    margin: 0 15px 20px 15px;
     border-radius: 10px;
 `;
 
 export const ContentContainer = styled.div`
     display: flex;
-    flex-direction: ${({ direction= "row" }) => direction};
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: ${({ background = "#999" }) => background};
-    height: ${({ height = "auto" }) => height};
-    width: ${({ width = "auto" }) => width};
-    margin: ${({ margin = "0" }) => margin};
+    height: auto;
+    width: 300px;
+    margin: auto;
 `;
 
 export const ScreenContainer = styled.div`

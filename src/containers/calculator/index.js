@@ -63,7 +63,7 @@ export default function Calculator(){
     return (
         <MainContainer>
             <Header/>
-            <ContentContainer margin={"auto"} width={"300px"}>
+            <ContentContainer>
                 <ScreenContainer>
                     <Screen type={"text"} disabled value={operation}>
                     </Screen>

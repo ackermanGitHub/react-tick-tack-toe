@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import { Link as ReactRouterLink } from 'react-router-dom';
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
