@@ -4,11 +4,24 @@ export const MainContainer = styled.div`
     background-color: #999;
 `;
 
-export const GameContainer = styled.div`
+export const GameContainer = styled.div`    
     display: flex;
     flex-direction: row;
     justify-content: center;
+    max-width: 800px;
     height: 400px;
+    margin: auto;
+
+    @media (max-width: 300px) {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0;
+
+        aside {
+            margin: 40px 0;
+            left: 0;
+        }
+    }
 `;
 
 export const InfoContainer = styled.div`
