@@ -11,7 +11,7 @@ export default function CatAPI() {
         <MainContainer>
             <Header/>
             <ContentContainer>
-                <CatImages limit={8}/>
+                <CatImages limit={10}/>
                 <Btn onClick={null} >Get Cat</Btn>
             </ContentContainer>
             <Footer></Footer>
