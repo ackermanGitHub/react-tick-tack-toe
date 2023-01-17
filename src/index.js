@@ -1,7 +1,6 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { GlobalStyles } from './global-styles';
-//import './index.css';
 import App from './app';
 export { default as packageJson } from '../package.json';
 
