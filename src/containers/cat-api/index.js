@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React/* , { useEffect, useState } */ from "react";
 import Header from "../../common/header";
 import Footer from "../../common/footer";
 import CatImages from "./catImages";
-import { CatImage, MainContainer, 
+import { MainContainer, 
     Btn, ContentContainer } from "./styles/catApi";
-import { api } from "./API";
+//import { api } from "./API";
 
 export default function CatAPI() {
-    const [catsUrl, setCatUrls] = useState([]);
+    /* const [catsUrl, setCatUrls] = useState([]);
     
     async function getCat() {
         try {
@@ -22,13 +22,13 @@ export default function CatAPI() {
         return () => {
             getCat();
         };
-    }, [])
+    }, []) */
 
     return (
         <MainContainer>
             <Header/>
             <ContentContainer>
-                <CatImages limit={10}/>
+                <CatImages limit={8}/>
                 {/* {
                     catsUrl.map((item, index)=>{
                         return (
@@ -37,7 +37,7 @@ export default function CatAPI() {
                         )
                     })
                 } */}
-                <Btn onClick={getCat} >Get Cat</Btn>
+                <Btn onClick={null} >Get Cat</Btn>
             </ContentContainer>
             <Footer></Footer>
         </MainContainer>
