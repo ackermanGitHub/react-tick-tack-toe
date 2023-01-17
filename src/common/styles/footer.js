@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-export const FooterContainer = styled.div`
+export const FooterContainer = styled.footer`
     display: flex;
     padding: 70px 56px;
     margin: auto;

@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 
 export const CatImage = styled.img`
-    margin: 20px auto;
+    margin: 100px auto;
     width: 300px;
     height: 300px;
 `;
