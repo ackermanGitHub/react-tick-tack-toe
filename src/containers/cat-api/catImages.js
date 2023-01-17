@@ -7,10 +7,9 @@ export default function CatImages({ limit }) {
     const [images, setImages] = useState([]);
 
     useEffect(() => {
-        console.log(this);
         async function fetchData() {
             const {data} = await api.get(`/images/search?limit=${limit}`);
-            setImages(data);
+            setImages(images.concat(data));
         }
         fetchData();
     }, [limit]);
