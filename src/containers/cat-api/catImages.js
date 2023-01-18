@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import { useQuery } from 'react-query';
 import LazyLoad from 'react-lazy-load';
 import InfiniteScroll from 'react-infinite-scroller';
@@ -7,6 +7,7 @@ import { CatImage } from './styles/catApi';
 
 export default function CatImages({ limit }) {
     const [page, setPage] = useState(1);
+    const [images, setImages] = useState([]);
 
     const { data, isLoading, error } = useQuery(
         ['catImages', limit, page],
@@ -16,10 +17,18 @@ export default function CatImages({ limit }) {
         }
     );
 
+    useEffect(() => {
+        if (data) {
+            setImages([...images, ...data]);
+        }
+    }, [data]);
+
     function loadMore() {
+        if (isLoading) return;
+        if (error) return;
         setPage(page + 1);
     }
-    if (isLoading) return <p>Loading...</p>;
+    //if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
 
     return (
@@ -29,7 +38,8 @@ export default function CatImages({ limit }) {
             hasMore={true}
             loader={<div className="loader" key={0}>Loading ...</div>}
         >
-            {data && data.length > 0 && data.map((image, index) => (
+            <h1>{`Page: ${page}(${limit*page-limit+1}-${limit*page})`}</h1>
+            {images && images.length > 0 && images.map((image, index) => (
                 <LazyLoad key={image.id} height={'400px'}>
                     <CatImage src={image.url} alt={image.id}/>
                 </LazyLoad>
