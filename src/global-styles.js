@@ -11,5 +11,6 @@ export const GlobalStyles = createGlobalStyle`
     }
     body {    
         font: 14px "Century Gothic", Futura, sans-serif;
+        background-color: #999;
     }
 `;
