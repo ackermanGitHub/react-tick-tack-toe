@@ -21,6 +21,7 @@ export default function CatImages({ limit }) {
         if (data) {
             setImages([...images, ...data]);
         }
+        // eslint-disable-next-line
     }, [data]);
 
     function loadMore() {
