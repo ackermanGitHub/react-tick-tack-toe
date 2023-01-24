@@ -20,6 +20,15 @@ export const ContentContainer = styled.div`
     width: 300px;
     margin: auto;
 `;
+
+export const FavCatsAside = styled.aside`
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    background-color: lightgray;
+`;
     
 export const BtnContainer = styled.div`
     display: flex;

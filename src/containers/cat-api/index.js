@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../common/header";
 import Footer from "../../common/footer";
-import CatImages from "./catImages";
+import CatsScroll from "./catsScroll";
+import FavContainer from "./favContainer";
 import { MainContainer, ContentContainer } from "./styles/catApi";
 
 export default function CatAPI() {
+    const [favOut, setFavOut] = useState(false);
 
     return (
         <MainContainer>
             <Header/>
             <ContentContainer>
-                <CatImages limit={10}/>
+                <CatsScroll/>
             </ContentContainer>
+            {favOut 
+                ? <FavContainer/> : null
+            }
             <Footer></Footer>
         </MainContainer>
     )
