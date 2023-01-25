@@ -5,6 +5,7 @@ import Game from "./containers/tick-tack-toe";
 import Calculator from "./containers/calculator";
 import RandomGen from "./containers/random-generator";
 import CatAPI from "./containers/cat-api";
+import Testing from "./containers/testing";
 import Home from "./home";
 
 const queryClient = new QueryClient()
@@ -29,6 +30,10 @@ export default function App() {
           <Route 
             exact path={"/Cat-API"} 
             element={ <CatAPI/> }
+          />
+          <Route 
+            exact path={"/Testing"} 
+            element={ <Testing/> }
           />
           <Route 
             exact path={"/"} 

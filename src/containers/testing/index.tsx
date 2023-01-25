@@ -1,17 +1,19 @@
 import React from "react";
 import Header from "../../common/header";
 import Footer from "../../common/footer";
-import CatsScroll from "./catsScroll";
-import { MainContainer, ContentContainer } from "./styles/catApi";
+import { MainContainer, Aside, Btn, ContentContainer } from "./styles/test";
 
-export default function CatAPI() {
+export default function Testing(){
+
     return (
         <MainContainer>
             <Header/>
             <ContentContainer>
-                <CatsScroll/>
+                this is a .tsx file
+                <Btn>🍔</Btn>
             </ContentContainer>
-            <Footer></Footer>
+            <Aside></Aside>
+            <Footer/>
         </MainContainer>
     )
 }

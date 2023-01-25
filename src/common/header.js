@@ -2,7 +2,7 @@ import React from "react";
 import { HeaderContainer, NavContainer, 
     Text, ButtonLink } from"./styles/header";
 
-export default function Header({children, ...restProps}){
+export default function Header({children = null, ...restProps}){
     return (
         <HeaderContainer {...restProps}>
             <NavContainer>
