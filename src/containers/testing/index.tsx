@@ -1,21 +1,13 @@
 import React from "react";
 import Header from "../../common/header";
 import Footer from "../../common/footer";
-import { MainContainer, Aside, ContentContainer } from "./styles/test";
+import { MainContainer, ContentContainer } from "./styles/test";
 import FilterableProductTable from './FilterableProductTable';
 
 export default function Testing(){
     return (
         <MainContainer>
             <Header/>
-            <Aside>
-                <ul>
-                    <li>li123</li>
-                    <li>li123</li>
-                    <li>li123</li>
-                    <li>li123</li>
-                </ul>
-            </Aside>
             <ContentContainer>
                 <FilterableProductTable products={PRODUCTS} />
             </ContentContainer>
