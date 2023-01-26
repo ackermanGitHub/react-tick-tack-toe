@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const SidebarContainer = styled.aside`
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
   width: 250px;
   background-color: #f5f5f5;
@@ -12,6 +12,17 @@ export const SidebarContainer = styled.aside`
 `;
 
 export const SidebarToggle = styled.button`
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+`;
+
+export const CloseSideBar = styled.button`
   position: absolute;
   top: 20px;
   right: 20px;
@@ -28,4 +39,5 @@ interface SidebarMenuProps {
 
 export const SidebarMenu = styled.nav<SidebarMenuProps>`
   display: ${props => (props.expanded ? 'block' : 'none')};
+  text-align: center;
 `;

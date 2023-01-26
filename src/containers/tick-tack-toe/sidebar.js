@@ -1,7 +1,7 @@
 import React from "react";
 import { SideBarContainer } from "./styles/tick-tack-toe";
 
-export default function SideBar({children, ...restProps}) {
+export default function GameSideBar({children, ...restProps}) {
     return (
       <SideBarContainer {...restProps}>
         {children}
